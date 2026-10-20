@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dk8li2vb10y7t"]
+
+[ext_resource type="Script" uid="uid://cwdhwmpxw0kna" path="res://system/ui/info_panel.gd" id="1_o27jp"]
+
+[node name="InfoPanel" type="PanelContainer" unique_id=903811030 node_paths=PackedStringArray("hovered_tile_label", "selected_tile_label", "base_layer_label")]
+custom_minimum_size = Vector2(100, 0)
+size_flags_horizontal = 8
+script = ExtResource("1_o27jp")
+hovered_tile_label = NodePath("MarginContainer/VBoxContainer/HBoxContainer/HoveredTileLabel")
+selected_tile_label = NodePath("MarginContainer/VBoxContainer/HBoxContainer2/SelectedTileLabel")
+base_layer_label = NodePath("MarginContainer/VBoxContainer/HBoxContainer3/BaseLayerLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=852498056]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1035219025]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1738010399]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1480792878]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.46618086, 0.4661808, 0.4661808, 1)
+text = "Selected"
+
+[node name="SelectedTileLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1306987617]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "< x, y >"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1167731999]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=371221255]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.46618086, 0.4661808, 0.4661808, 1)
+text = "Hovered"
+
+[node name="HoveredTileLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1823441938]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "< x, y >"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1816198871]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1687251077]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.46618086, 0.4661808, 0.4661808, 1)
+text = "Base layer"
+
+[node name="BaseLayerLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1485751243]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "-"

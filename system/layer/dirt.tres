@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Layer" format=3 uid="uid://be71te8pe0bkw"]
+
+[ext_resource type="Texture2D" uid="uid://uc7bgftu652d" path="res://resources/textures/tiles/dirt.png" id="1_mq4ak"]
+[ext_resource type="Script" uid="uid://bfhga37vxnq18" path="res://system/layer/layer.gd" id="1_r2pb1"]
+
+[resource]
+script = ExtResource("1_r2pb1")
+display_name = "dirt"
+base_tile_texture = ExtResource("1_mq4ak")
+metadata/_custom_type_script = "uid://bfhga37vxnq18"

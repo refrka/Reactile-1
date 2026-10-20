@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://f8gjbb3r7ppk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uoppv"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7736044, 0.90986377, 0.9089859, 0.6117647)
+corner_detail = 5
+
+[node name="TileOutline" type="PanelContainer" unique_id=1174733609 groups=["tile_outline"]]
+offset_right = 16.0
+offset_bottom = 16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uoppv")

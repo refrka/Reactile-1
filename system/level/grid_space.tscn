@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cqnbe805pbhwx"]
+
+[ext_resource type="Script" uid="uid://c4xafwe3lqkhf" path="res://system/level/grid_space.gd" id="1_b25mo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xj5yv"]
+bg_color = Color(0.25565878, 0.25565878, 0.25565878, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b25mo"]
+bg_color = Color(0.28118682, 0.2811869, 0.28118676, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ii5ms"]
+bg_color = Color(0.25565878, 0.25565878, 0.25565878, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wajye"]
+bg_color = Color(0.28118682, 0.2811869, 0.28118676, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[node name="GridSpace" type="MarginContainer" unique_id=1581908780 node_paths=PackedStringArray("panel")]
+custom_minimum_size = Vector2(48, 48)
+script = ExtResource("1_b25mo")
+default_stylebox = SubResource("StyleBoxFlat_xj5yv")
+hovered_stylebox = SubResource("StyleBoxFlat_b25mo")
+selected_stylebox = SubResource("StyleBoxFlat_ii5ms")
+selected_and_hovered_stylebox = SubResource("StyleBoxFlat_wajye")
+panel = NodePath("PanelContainer")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=214211420]
+layout_mode = 2
+mouse_filter = 2

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://nd5jc27nwr8d"]
+
+[ext_resource type="Script" uid="uid://dek8vp6pc22ul" path="res://system/level/level.gd" id="1_q02a1"]
+[ext_resource type="PackedScene" uid="uid://1yfrkhqxsdh6" path="res://system/tile/tile.tscn" id="2_q02a1"]
+[ext_resource type="Resource" uid="uid://dwswh311udxru" path="res://system/layer/grass.tres" id="4_myq1k"]
+[ext_resource type="Resource" uid="uid://be71te8pe0bkw" path="res://system/layer/dirt.tres" id="4_y6x6e"]
+[ext_resource type="Resource" uid="uid://dsjumdn24mxaa" path="res://system/layer/soil.tres" id="5_myq1k"]
+
+[sub_resource type="TileSet" id="TileSet_aajxx"]
+
+[node name="Level" type="Node2D" unique_id=1739185308 node_paths=PackedStringArray("tile_map", "tile_root")]
+script = ExtResource("1_q02a1")
+tile_map = NodePath("TileMapLayer")
+tile_root = NodePath("Tiles")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1454018974]
+tile_set = SubResource("TileSet_aajxx")
+
+[node name="Tiles" type="Node2D" parent="." unique_id=1186571764]
+
+[node name="Tile" parent="Tiles" unique_id=1293000198 instance=ExtResource("2_q02a1")]
+position = Vector2(64, 48)
+base_layer = ExtResource("4_myq1k")
+
+[node name="Tile2" parent="Tiles" unique_id=284950004 instance=ExtResource("2_q02a1")]
+position = Vector2(80, 48)
+base_layer = ExtResource("4_y6x6e")
+
+[node name="Tile3" parent="Tiles" unique_id=1232449777 instance=ExtResource("2_q02a1")]
+position = Vector2(64, 64)
+base_layer = ExtResource("5_myq1k")
+
+[node name="Tile4" parent="Tiles" unique_id=2118037736 instance=ExtResource("2_q02a1")]
+position = Vector2(80, 64)
+base_layer = ExtResource("5_myq1k")

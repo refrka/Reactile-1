@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Layer" format=3 uid="uid://dwswh311udxru"]
+
+[ext_resource type="Texture2D" uid="uid://b5cg33bsqouyv" path="res://resources/textures/tiles/grass.png" id="1_r7nnu"]
+[ext_resource type="Script" uid="uid://bfhga37vxnq18" path="res://system/layer/layer.gd" id="2_bgttw"]
+
+[resource]
+script = ExtResource("2_bgttw")
+display_name = "grass"
+base_tile_texture = ExtResource("1_r7nnu")

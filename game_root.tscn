@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b61rtvxwrincb"]
+
+[ext_resource type="PackedScene" uid="uid://nd5jc27nwr8d" path="res://system/level/level.tscn" id="1_xj5yv"]
+[ext_resource type="PackedScene" uid="uid://dk8li2vb10y7t" path="res://system/ui/info_panel.tscn" id="2_lkrbl"]
+[ext_resource type="PackedScene" uid="uid://dm61xbe4g6l6m" path="res://system/cursor/tile_cursor.tscn" id="2_pjpa4"]
+[ext_resource type="PackedScene" uid="uid://f8gjbb3r7ppk" path="res://system/cursor/tile_outline.tscn" id="3_bxsma"]
+
+[node name="GameRoot" type="Node" unique_id=2033188000]
+
+[node name="LevelCanvas" type="CanvasLayer" parent="." unique_id=966240836]
+
+[node name="LevelRoot" type="Node2D" parent="LevelCanvas" unique_id=1055457414 groups=["level_root"]]
+
+[node name="Level" parent="LevelCanvas/LevelRoot" unique_id=1739185308 instance=ExtResource("1_xj5yv")]
+
+[node name="HUDCanvas" type="CanvasLayer" parent="." unique_id=1593616779]
+
+[node name="Control" type="Control" parent="HUDCanvas" unique_id=1929418273]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HUDCanvas/Control" unique_id=1414057949]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="InfoPanel" parent="HUDCanvas/Control/MarginContainer" unique_id=903811030 instance=ExtResource("2_lkrbl")]
+layout_mode = 2
+
+[node name="CursorRoot" type="CanvasLayer" parent="." unique_id=618416548]
+
+[node name="CursorRoot" type="Control" parent="CursorRoot" unique_id=937169933]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TileCursor" parent="CursorRoot/CursorRoot" unique_id=361464887 instance=ExtResource("2_pjpa4")]
+layout_mode = 0
+
+[node name="TileOutline" parent="CursorRoot/CursorRoot" unique_id=1461118635 instance=ExtResource("3_bxsma")]
+layout_mode = 0
+
+[editable path="LevelCanvas/LevelRoot/Level"]

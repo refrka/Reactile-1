@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://1yfrkhqxsdh6"]
+
+[ext_resource type="Script" uid="uid://bux2d5tf8io15" path="res://system/tile/tile.gd" id="1_mbmll"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opebx"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0.13333334)
+corner_detail = 5
+
+[node name="Tile" type="Node2D" unique_id=1293000198 node_paths=PackedStringArray("panel", "texture_rect")]
+script = ExtResource("1_mbmll")
+panel = NodePath("PanelContainer")
+texture_rect = NodePath("TextureRect")
+metadata/_custom_type_script = "uid://bux2d5tf8io15"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=734263815]
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_opebx")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1996986771]
+offset_right = 16.0
+offset_bottom = 16.0
